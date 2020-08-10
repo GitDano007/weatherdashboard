@@ -3,7 +3,9 @@
 $('#citySubmit').on('click', function(e) {
     event.preventDefault(e);
     var cityInput= $('#cityInput').val();
+
     var OW_API_KEY= "84301864d8fc9d004d0764d16da441c4";
+
     queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&units=imperial&appid=" + OW_API_KEY;
     
     $.ajax({
@@ -23,9 +25,9 @@ $('#citySubmit').on('click', function(e) {
 
 
 
-            weatherIcon= $("<img src='https://openweathermap.org/img/wn/" + 
-            response.weather[0].icon + ".png' > "),
-            
+                    weatherIcon= $("<img src='https://openweathermap.org/img/wn/" + 
+                    response.weather[0].icon + ".png' > "),
+                    
 
 
 
@@ -47,9 +49,13 @@ $('#citySubmit').on('click', function(e) {
 
 
         title = $('<h3>').attr('class','card-title').append( response.name + " (" + currentTime + ") "  ).append(weatherIcon);
+
         temp = $('<p>').attr('class', 'card-text').append("Temperature: " + response.main.temp + "°F");
+
         humidity = $('<p>').attr('class', 'card-text').append("Humidity: " + response.main.humidity + "%");
+
         windSpeed = $('<p>').attr('class', 'card-text').append("Wind Speed: " + response.wind.speed + "mph");
+        
 
         $(appendedCard).append(title, temp, humidity, windSpeed);
     
