@@ -2,11 +2,11 @@
 
 $('#citySubmit').on('click', function(e) {
     event.preventDefault(e);
-    var cityInput= $('#cityInput').val();
+    var inputCity= $('#inputCity').val();
 
     var OW_API_KEY= "84301864d8fc9d004d0764d16da441c4";
 
-    queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&units=imperial&appid=" + OW_API_KEY;
+    queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + inputCity + "&units=imperial&appid=" + OW_API_KEY;
     
     $.ajax({
         url: queryURL,
@@ -55,7 +55,7 @@ $('#citySubmit').on('click', function(e) {
         humidity = $('<p>').attr('class', 'card-text').append("Humidity: " + response.main.humidity + "%");
 
         windSpeed = $('<p>').attr('class', 'card-text').append("Wind Speed: " + response.wind.speed + "mph");
-        
+
 
         $(appendedCard).append(title, temp, humidity, windSpeed);
     
@@ -64,5 +64,5 @@ $('#citySubmit').on('click', function(e) {
 
     
 
-    $("#cityInput").val("");
+    $("#inputCity").val("");
 });
