@@ -20,3 +20,5 @@ Links:
 https://github.com/GitDano007/weatherdashboard
 
 https://gitdano007.github.io/weatherdashboard/
+
+! [] (screenshot.JPG)
