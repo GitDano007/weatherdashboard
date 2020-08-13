@@ -21,4 +21,4 @@ https://github.com/GitDano007/weatherdashboard
 
 https://gitdano007.github.io/weatherdashboard/
 
-![] (screenshot.JPG)
+![screenshot](https://user-images.githubusercontent.com/64987180/90172478-ec070e00-dd57-11ea-80db-539ad00c406d.JPG)
